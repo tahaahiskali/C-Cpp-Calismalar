@@ -39,7 +39,7 @@ void ekranaYaz(node *r)
 {
 	int i = 0;
 	
-	while( r != NULL) //burada hepsini yazdýrýyoruz next->Null yapmýyoruz çünkü r bizim için önemli bir yer tutmuyor
+	while( r != NULL) //burada hepsini yazdÃ½rÃ½yoruz next->Null yapmÃ½yoruz Ã§Ã¼nkÃ¼ r bizim iÃ§in Ã¶nemli bir yer tutmuyor
 	{
 		i++;
 		printf("%d.eleman = %d\n",i,r->x);
