@@ -3,7 +3,7 @@
 #define MAX 9
 
 
-/*Statik Deðiþkenler*/
+/*Statik DeÃ°iÃ¾kenler*/
 int color[MAX];
 int d[MAX];
 int f[MAX];
@@ -38,7 +38,7 @@ void DFS()
 {
 	int u;
 	
-	for (  u=0; u<MAX; u++ ) // baþlangýç atamalarý
+	for (  u=0; u<MAX; u++ ) // baÃ¾langÃ½Ã§ atamalarÃ½
 	{
 		color[u] = 0;
 		pred [u] = NULL;
@@ -58,14 +58,14 @@ void DFS()
 void DFSVisit(int u)
 {
 	color[u] = 1;
-	d[u] = ++time; // ilk kez varýþ zamanýný ayarla
+	d[u] = ++time; // ilk kez varÃ½Ã¾ zamanÃ½nÃ½ ayarla
 	int v = 0;
 	
-	while ( v < MAX ) // bütün komþulara bakacaðýz
+	while ( v < MAX ) // bÃ¼tÃ¼n komÃ¾ulara bakacaÃ°Ã½z
 	{
-		if( D[u][v] == 1) // eger v dugumune u'dan gidiliyor ise. (komþusu ise)   
+		if( D[u][v] == 1) // eger v dugumune u'dan gidiliyor ise. (komÃ¾usu ise)   
 		{
-			if (color[v] == 0) // ayrýca v dugumunun rengi beyaz ise    // ÝKÝ IF ÝFADESÝ &&(ve,and) ÝFADESÝ ÝLE TEK SEFERDE YAZILABÝLÝRDÝ FAKAT BURADA ALGORÝTMANIN MANTIÐINI ANLAMAK ÝÇÝN AYRI YAZILMIÞTIR. (KABA KODA UYARLANILSIN DÝYE.)
+			if (color[v] == 0) // ayrÃ½ca v dugumunun rengi beyaz ise    // ÃKÃ IF ÃFADESÃ &&(ve,and) ÃFADESÃ ÃLE TEK SEFERDE YAZILABÃLÃRDÃ FAKAT BURADA ALGORÃTMANIN MANTIÃINI ANLAMAK ÃÃ‡ÃN AYRI YAZILMIÃžTIR. (KABA KODA UYARLANILSIN DÃYE.)
 			{
 				pred[v] = u;
 				DFSVisit(v);
@@ -77,8 +77,8 @@ void DFSVisit(int u)
 	}
 	
 	printf("siyah olan = %d\n" , u);
-	color[u] = 2; // U dugumu ile iþimiz bitti siyah yap
-	f[u] = ++time; // iþlem süresini ata
+	color[u] = 2; // U dugumu ile iÃ¾imiz bitti siyah yap
+	f[u] = ++time; // iÃ¾lem sÃ¼resini ata
 }
 	
 
