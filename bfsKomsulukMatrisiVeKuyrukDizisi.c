@@ -9,7 +9,7 @@ struct queue{
 
 queue *root;
 
-/*Statik Deðiþkenler*/
+/*Statik DeÃ°iÃ¾kenler*/
 int color[MAX];
 int d[MAX];
 int pred[MAX];
@@ -146,13 +146,13 @@ void BFS(int G[][9],int m,int n, int s)
 	while(empty() != -1)
 	{
 		
-		u = remove(); // kuyruktan çýkar
+		u = remove(); // kuyruktan Ã§Ã½kar
 		
 	v = 0;
 	
-	while ( v < 9) // bütün komþularýný gezene kadar.
+	while ( v < 9) // bÃ¼tÃ¼n komÃ¾ularÃ½nÃ½ gezene kadar.
 	{
-		if ( G[u][v] == 1 && color[v] == 0 ) // u ile v komþu ise ve komþusu olan v'ye hiç gidilmemiþ ise
+		if ( G[u][v] == 1 && color[v] == 0 ) // u ile v komÃ¾u ise ve komÃ¾usu olan v'ye hiÃ§ gidilmemiÃ¾ ise
 		{
 			color[v] = 1;
 			d[v] = d[u] + 1;
@@ -164,7 +164,7 @@ void BFS(int G[][9],int m,int n, int s)
 		v++;
 	}
 	
-	color[u] = 2; // u'nun hiç gidilmemiþ komþularýný kuyruða ekledikten sonra (while'den sonra) u'yu siyah yap.
+	color[u] = 2; // u'nun hiÃ§ gidilmemiÃ¾ komÃ¾ularÃ½nÃ½ kuyruÃ°a ekledikten sonra (while'den sonra) u'yu siyah yap.
 	printf("siyah olan = %d\n" ,u);
 	}	
 		
